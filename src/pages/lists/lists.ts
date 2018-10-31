@@ -1,25 +1,20 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+import { reorderArray } from 'ionic-angular';
 
-/**
- * Generated class for the ListsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
-@IonicPage()
+
 @Component({
   selector: 'page-lists',
   templateUrl: 'lists.html',
 })
 export class ListsPage {
+  items = ['Apples', 'Bananas', 'Berries'];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor (private navCtrl: NavController){}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ListsPage');
-  }
+  reorderItems(indexes){
+    this.items = reorderArray(this.items, indexes);
+}
 
 }
