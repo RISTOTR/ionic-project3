@@ -6,7 +6,24 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding="">
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3>
+        A column
+      </ion-col>
+      <ion-col>
+          A second column
+        </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col offset-3>
+        A new column
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
   <button 
   (click)="onClick()"
   ion-button
